@@ -1,0 +1,10 @@
+{% extends '_layout.html' %}
+
+{% block body %}
+<h1>Hello {{ name }}</h1>
+<a href="/about">Link to about</a>
+<form action="/submit" method="post">
+  <input type="text" name="food" id="food" autocomplete="off">
+  <input type="submit" value="Submit">
+</form>
+{% endblock %}
