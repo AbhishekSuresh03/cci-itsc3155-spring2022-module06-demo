@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block title %}Result{% endblock %}
+
+{% block content %}
+<h1>Result</h1>
+{% if is_integer %}
+{% if is_even %}
+<p>{{ number }} is an even number</p>
+{% else %}
+<p>{{ number }} is an odd number</p>
+{% endif %}
+{% else %}
+<p>{{ number }} is not an integer</p>
+{% endif %}
+<a href="{{ url_for('index') }}">Go back home</a>
+{% endblock %}
